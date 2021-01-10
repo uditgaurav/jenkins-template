@@ -4,7 +4,6 @@ metadata:
     experiment: pod-delete
 spec:
   serviceAccountName: litmus-jenkins-sa
-  restartPolicy: Never
   containers:
   - name: jnlp
     image: litmuschaos/chaos-ci-lib:v0.3.0
