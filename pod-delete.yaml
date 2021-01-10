@@ -1,0 +1,16 @@
+metadata:
+  labels:
+    experiment: pod-delete
+spec:
+  containers:
+  - name: pod-delete
+    image: litmuschaos/chaos-ci-lib:v0.3.0
+    command: ["/bin/bash"]
+    args:
+    - -c 
+    - ./experiment_entrypoint.sh
+    env:
+    - name: INSTALL_LITMUS
+      value: "true"
+    - name: EXPERIMENT_NAME
+      value: "pod-delete"
