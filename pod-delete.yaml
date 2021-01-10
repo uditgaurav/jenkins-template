@@ -7,10 +7,6 @@ spec:
   restartPolicy: Never
   containers:
   - name: jnlp
-    env:
-    - name: CONTAINER_ENV_VAR
-      value: jnlp
-  - name: pod-delete
     image: litmuschaos/chaos-ci-lib:v0.3.0
     imagePullPolicy: Always
     command: ["/bin/bash"]
