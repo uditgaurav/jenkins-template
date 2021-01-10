@@ -19,3 +19,5 @@ spec:
       value: "true"
     - name: EXPERIMENT_NAME
       value: "pod-delete"
+    - name: UNINSTALL_LITMUS
+      value: "true"
