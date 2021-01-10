@@ -6,6 +6,14 @@ spec:
   serviceAccountName: litmus-jenkins-sa
   restartPolicy: Never
   containers:
+  - name: jnlp
+    env:
+    - name: CONTAINER_ENV_VAR
+      value: jnlp
+      ports:
+        - name: web
+          containerPort: 8081
+          protocol: TCP      
   - name: pod-delete
     image: litmuschaos/chaos-ci-lib:v0.3.0
     imagePullPolicy: Always
