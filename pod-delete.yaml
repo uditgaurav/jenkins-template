@@ -7,6 +7,11 @@ spec:
   restartPolicy: Never
   containers:
   - name: jnlp
+    image: gcr.io/cloud-solutions-images/jenkins-k8s-slave
+    env:
+    - name: CONTAINER_ENV_VAR
+      value: jnlp
+  - name: pod-delete
     image: litmuschaos/chaos-ci-lib:v0.3.0
     imagePullPolicy: Always
     command: ["/bin/bash"]

@@ -11,7 +11,7 @@ pipeline {
         sh "echo INSTALL_LITMUS = ${INSTALL_LITMUS}"
         sh "echo EXPERIMENT NAME = ${EXPERIMENT_NAME}"
         container('pod-delete') {
-          sh 'export EXPERIMENT_NAME =pod-delete'
+          sh 'export EXPERIMENT_NAME=pod-delete'
         }
       }
     }
