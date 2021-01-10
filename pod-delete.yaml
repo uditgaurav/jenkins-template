@@ -4,7 +4,6 @@ metadata:
   name: pod-delete
   labels:
     experiment: pod-delete
-    jenkins: slave
 spec:
   template:
     spec:
