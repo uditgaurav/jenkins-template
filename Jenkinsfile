@@ -4,11 +4,13 @@ pipeline {
       yamlFile 'pod-delete.yaml'
     }
   }
-  // stages {
-  //   stage('Setup ENVs') {
-  //     steps {
-  //       sh "echo EXPERIMENT NAME = ${EXPERIMENT_NAME}"
-  //     }
-  //   }
-  // }
+  stages {
+    stage('Show ENVs') {
+      steps {
+        container('jnlp') {
+          sh "echo hello world"
+        }
+      }
+    }
+  }
 }
