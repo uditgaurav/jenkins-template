@@ -5,16 +5,11 @@ metadata:
 spec:
   serviceAccountName: litmus-jenkins-sa
   restartPolicy: Never
-  initContainers:
-  - name: jnlp
-    image: gcr.io/cloud-solutions-images/jenkins-k8s-slave
-    env:
-    - name: CONTAINER_ENV_VAR
-      value: jnlp
   containers:
-  - name: pod-delete
+  - name: jnlp
     image: litmuschaos/chaos-ci-lib:v0.3.0
     imagePullPolicy: Always
+    tty: true
     command: ["/bin/bash"]
     args:
     - -c 
