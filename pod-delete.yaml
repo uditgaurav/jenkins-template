@@ -1,24 +1,22 @@
-apiVersion: batch/v1
-kind: Job
+apiVersion: v1
+kind: Pod
 metadata:
   name: pod-delete
   labels:
     experiment: pod-delete
 spec:
-  template:
-    spec:
-      serviceAccountName: litmus-jenkins-sa
-      restartPolicy: Never
-      containers:
-      - name: pod-delete
-        image: litmuschaos/chaos-ci-lib:v0.3.0
-        imagePullPolicy: Always
-        command: ["/bin/bash"]
-        args:
-        - -c 
-        - ./experiment_entrypoint.sh
-        env:
-        - name: INSTALL_LITMUS
-          value: "true"
-        - name: EXPERIMENT_NAME
-          value: "pod-delete"
+  serviceAccountName: litmus-jenkins-sa
+  restartPolicy: Never
+  containers:
+  - name: pod-delete
+    image: litmuschaos/chaos-ci-lib:v0.3.0
+    imagePullPolicy: Always
+    command: ["/bin/bash"]
+    args:
+    - -c 
+    - ./experiment_entrypoint.sh
+    env:
+    - name: INSTALL_LITMUS
+      value: "true"
+    - name: EXPERIMENT_NAME
+      value: "pod-delete"
