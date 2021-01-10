@@ -1,16 +1,17 @@
 metadata:
-  name: pod-delete
+  name: jnlp
   labels:
     experiment: pod-delete
 spec:
   serviceAccountName: litmus-jenkins-sa
   restartPolicy: Never
-  containers:
+  initContainers:
   - name: jnlp
     image: gcr.io/cloud-solutions-images/jenkins-k8s-slave
     env:
     - name: CONTAINER_ENV_VAR
       value: jnlp
+  containers:
   - name: pod-delete
     image: litmuschaos/chaos-ci-lib:v0.3.0
     imagePullPolicy: Always
