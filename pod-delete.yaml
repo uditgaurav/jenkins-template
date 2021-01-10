@@ -1,5 +1,5 @@
 metadata:
-  name: jnlp
+  name: pod-delete
   labels:
     experiment: pod-delete
 spec:
