@@ -8,7 +8,7 @@ pipeline {
     stage('Show ENVs') {
       steps {
         container('jnlp') {
-          sh "echo hello world"
+          sh "echo running pod-dlete experiment"
         }
       }
     }
