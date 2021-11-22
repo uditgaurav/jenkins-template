@@ -6,7 +6,8 @@ spec:
   serviceAccountName: litmus-jenkins-sa
   containers:
   - name: jnlp
-    image: litmuschaos/chaos-ci-lib:v0.3.0
+    # The tested version is litmuschaos/chaos-ci-lib:v0.3.0  
+    image: litmuschaos/chaos-ci-lib:v0.4.0
     imagePullPolicy: Always
     tty: true
     command: ["/bin/bash"]
