@@ -1,8 +1,6 @@
 # LitmusChaos Jenkins Template
 
-- It is a  CI template to run litmus experiment in jenkins pipelines.
-
-## POC with pod-delete
+- It is a CI template to run litmus experiment in jenkins pipelines stage.
 
 - This template provides a way to perform a chaos experiments on the Kubernetes environment. It contains Litmus Chaos experiments to run the chaos and find a weakness in the system.
 
