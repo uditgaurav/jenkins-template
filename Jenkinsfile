@@ -5,10 +5,10 @@ pipeline {
     }
   }
   stages {
-    stage('Show ENVs') {
+    stage('Show Experiment') {
       steps {
         container('jnlp') {
-          sh "echo running pod-dlete experiment"
+          sh "echo running pod-delete experiment"
         }
       }
     }
