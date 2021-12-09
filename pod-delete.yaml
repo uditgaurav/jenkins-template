@@ -3,7 +3,7 @@ metadata:
   labels:
     experiment: pod-delete
 spec:
-  serviceAccountName: litmus-jenkins-sa
+#   serviceAccountName: litmus-jenkins-sa
   containers:
   - name: jnlp
     # The tested version is litmuschaos/chaos-ci-lib:v0.3.0  
