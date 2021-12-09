@@ -6,7 +6,7 @@
 
 ## Pre-requisites
 
-- Use [Kubernetes Puglin](https://plugins.jenkins.io/kubernetes/)
+- Use [Kubernetes Puglin](https://plugins.jenkins.io/kubernetes/) and [Kubernetes Contineous Deploy Plugin](https://plugins.jenkins.io/kubernetes-cd/)
 - Kubernetes 1.17 or later
 
 Notice The `jnlp` container in [Jenkinsfile](https://github.com/uditgaurav/jenkins-template/blob/5d01d58d0186d3b91c3b93ea49e0eee6ed5f70f2/Jenkinsfile#L10) is the default execution container. you can find the complete more details [here](https://github.com/jflowers/spring-petclinic/blob/blog-jenkins-agents-through-aggregation/Jenkinsfile).
